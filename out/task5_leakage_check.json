@@ -1,0 +1,5 @@
+{
+  "test_with_hamming<=0": 0,
+  "test_with_cos>0.98": 1,
+  "n_test": 818
+}

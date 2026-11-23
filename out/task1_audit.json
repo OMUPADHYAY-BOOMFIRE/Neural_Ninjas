@@ -1,0 +1,20 @@
+{
+  "n_label_rows": 5451,
+  "n_image_files": 5451,
+  "labels_without_file": 0,
+  "files_without_label": 0,
+  "missing_scores": 0,
+  "score_min": 1.016667,
+  "score_max": 4.75,
+  "unparsed_group": 0,
+  "hardware": {
+    "cuda": false,
+    "opencl": true,
+    "cpu_count": 16
+  },
+  "corrupt_files": 0,
+  "n_valid": 5451,
+  "image_sizes_top": {
+    "(350, 350)": 5451
+  }
+}

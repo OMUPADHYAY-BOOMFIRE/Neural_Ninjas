@@ -1,0 +1,33 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# Large dataset image directories (download via python download_dataset.py)
+Images/
+duplicate/
+
+# Python byte-code and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Intermediate checkpoint dumps (large matrix caches)
+checkpoints/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Operating system artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+*.swo

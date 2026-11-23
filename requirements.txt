@@ -1,0 +1,18 @@
+# Neural Ninjas — Requirements
+# Compatible with Python 3.10, 3.11, 3.12, 3.13, 3.14, 3.15+
+# IMPORTANT: OpenCV must be < 5.0 for Haar cascade XML compatibility
+
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+scikit-image>=0.21
+opencv-python-headless>=4.8,<5
+matplotlib>=3.7
+joblib>=1.3
+openpyxl>=3.1
+tqdm>=4.65
+kagglehub>=0.2.0
+
+# Optional: PyTorch with CUDA for RTX 5050 tensor acceleration
+# Install via: pip install torch --index-url https://download.pytorch.org/whl/cu124

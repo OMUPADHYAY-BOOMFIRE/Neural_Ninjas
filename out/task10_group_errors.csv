@@ -1,0 +1,5 @@
+group,n,mean_true,mean_pred,bias,MAE,MedAE
+Asian Female,315,3.0274,3.0564,0.0291,0.3555,0.2807
+Asian Male,286,2.8809,2.913,0.0322,0.3107,0.2617
+Caucasian Female,115,3.1955,3.085,-0.1105,0.3246,0.262
+Caucasian Male,102,3.0214,2.9151,-0.1063,0.2885,0.2315
