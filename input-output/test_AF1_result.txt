@@ -1,0 +1,25 @@
+====================================================================
+  IMAGE : test_AF1.jpg
+--------------------------------------------------------------------
+  Resolution      : 350x350 px
+  Face detected   : Yes
+  Sharpness       : 657.8  (higher = sharper)
+  Brightness      : 125.4  Contrast: 96.6
+--------------------------------------------------------------------
+  Pipeline Predictions:
+    P1 Appearance (HOG+LBP+Ridge): 3.1117
+    P2 Geometry   (Ratios+HistGB): 2.9618
+    P3 From-Scratch (PCA + MLP)  : 2.5817
+--------------------------------------------------------------------
+  ENSEMBLE RATING : 2.8851 / 5.0000
+  RATING TIER     : Average   (mid-range consensus)
+  80% CI          : [2.369, 3.433]
+  Pipeline SD     : 0.2231
+--------------------------------------------------------------------
+  WARNINGS:
+    [!] contrast unusually HIGH (96.6 > train 95th pct 92.9)
+    [!] High pipeline disagreement (SD 0.223 > thr 0.182)
+====================================================================
+
+[DISCLAIMER] This score is a statistical estimate from a specific rater panel.
+DO NOT use for hiring, admissions, or judging human worth.

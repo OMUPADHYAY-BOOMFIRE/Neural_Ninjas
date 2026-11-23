@@ -1,0 +1,62 @@
+NEURAL NINJAS — BATCH PREDICTION RESULTS
+Run timestamp : 2026-11-23 12:36:08
+Images processed : 2
+Model bundle : out/bundle.joblib  (variant: low_rgb)
+====================================================================
+
+SUMMARY TABLE
+--------------------------------------------------------------------
+Image                                 Rating  Tier                           Warnings
+--------------------------------------------------------------------
+test_AF1.jpg                          2.8851  Average                        [!]
+test_CF100.jpg                        2.5053  Low                            [ ]
+
+====================================================================
+  IMAGE : test_AF1.jpg
+--------------------------------------------------------------------
+  Resolution      : 350x350 px
+  Face detected   : Yes
+  Sharpness       : 657.8  (higher = sharper)
+  Brightness      : 125.4  Contrast: 96.6
+--------------------------------------------------------------------
+  Pipeline Predictions:
+    P1 Appearance (HOG+LBP+Ridge): 3.1117
+    P2 Geometry   (Ratios+HistGB): 2.9618
+    P3 From-Scratch (PCA + MLP)  : 2.5817
+--------------------------------------------------------------------
+  ENSEMBLE RATING : 2.8851 / 5.0000
+  RATING TIER     : Average   (mid-range consensus)
+  80% CI          : [2.369, 3.433]
+  Pipeline SD     : 0.2231
+--------------------------------------------------------------------
+  WARNINGS:
+    [!] contrast unusually HIGH (96.6 > train 95th pct 92.9)
+    [!] High pipeline disagreement (SD 0.223 > thr 0.182)
+====================================================================
+
+====================================================================
+  IMAGE : test_CF100.jpg
+--------------------------------------------------------------------
+  Resolution      : 350x350 px
+  Face detected   : Yes
+  Sharpness       : 1085.0  (higher = sharper)
+  Brightness      : 168.2  Contrast: 72.1
+--------------------------------------------------------------------
+  Pipeline Predictions:
+    P1 Appearance (HOG+LBP+Ridge): 2.5031
+    P2 Geometry   (Ratios+HistGB): 2.6426
+    P3 From-Scratch (PCA + MLP)  : 2.3702
+--------------------------------------------------------------------
+  ENSEMBLE RATING : 2.5053 / 5.0000
+  RATING TIER     : Low       (below average)
+  80% CI          : [1.990, 3.053]
+  Pipeline SD     : 0.1112
+--------------------------------------------------------------------
+  [OK] All quality checks passed.
+====================================================================
+
+====================================================================
+Total processing time: 1.63s  (813 ms/image avg)
+
+[DISCLAIMER] Predictions are statistical estimates from a specific annotator panel.
+DO NOT use for hiring, admissions, dating filters, or evaluating human worth.

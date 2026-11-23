@@ -136,6 +136,55 @@ python 05_predict_face.py Images/AF1.jpg --bundle out/bundle.joblib
 
 ---
 
+## 6. Batch Predict on Your Own Images (`input/` → `input-output/`)
+
+> **The model is already trained.** You do not need to re-run Steps 1–5 above.
+> Just drop images into `input/` and run one command to get structured results.
+
+### How it works
+
+```
+input/           ← paste any jpg / png / bmp / webp face photos here
+input-output/    ← results land here automatically
+  ├── results.txt              ← full summary table + per-image detail blocks
+  └── <image_name>_result.txt  ← one dedicated file per input image
+```
+
+### One-command run
+
+```bash
+python batch_predict.py
+```
+
+That's it. Every image in `input/` gets processed in sequence. No flags needed.
+
+### What you get per image
+
+| Field | Description |
+|---|---|
+| **Ensemble Rating** | Mean of P1 + P2 + P3 scores, scale 1.0–5.0 |
+| **Rating Tier** | Very Low / Low / Average / High / Very High |
+| **80% CI** | Empirical confidence interval from CV residuals |
+| **P1 Appearance** | HOG + LBP + Color → Ridge prediction |
+| **P2 Geometry** | Facial ratios + Edge grid → HistGB prediction |
+| **P3 From-Scratch** | Custom PCA + Backprop MLP prediction |
+| **Sharpness** | Laplacian variance (blur indicator) |
+| **Face Detected** | Whether Haar cascade found a frontal face |
+| **Warnings** | Flags for blur, resolution, pipeline disagreement |
+
+### Git behaviour
+
+- `input/` images are **excluded from Git** (via `.gitignore`). Your test photos stay local.
+- `input-output/` text results **are committed** — push them to GitHub to share proof/scores publicly.
+
+```bash
+git add input-output/
+git commit -m "results: batch predictions on custom test images"
+git push
+```
+
+---
+
 ## 6. Git & GitHub Push Instructions
 
 The repository is configured with `.gitignore` to exclude `.venv/`, `Images/` (> 1 GB), `checkpoints/`, and temporary caches:

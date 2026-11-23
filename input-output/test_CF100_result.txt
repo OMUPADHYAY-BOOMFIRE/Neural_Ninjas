@@ -1,0 +1,23 @@
+====================================================================
+  IMAGE : test_CF100.jpg
+--------------------------------------------------------------------
+  Resolution      : 350x350 px
+  Face detected   : Yes
+  Sharpness       : 1085.0  (higher = sharper)
+  Brightness      : 168.2  Contrast: 72.1
+--------------------------------------------------------------------
+  Pipeline Predictions:
+    P1 Appearance (HOG+LBP+Ridge): 2.5031
+    P2 Geometry   (Ratios+HistGB): 2.6426
+    P3 From-Scratch (PCA + MLP)  : 2.3702
+--------------------------------------------------------------------
+  ENSEMBLE RATING : 2.5053 / 5.0000
+  RATING TIER     : Low       (below average)
+  80% CI          : [1.990, 3.053]
+  Pipeline SD     : 0.1112
+--------------------------------------------------------------------
+  [OK] All quality checks passed.
+====================================================================
+
+[DISCLAIMER] This score is a statistical estimate from a specific rater panel.
+DO NOT use for hiring, admissions, or judging human worth.

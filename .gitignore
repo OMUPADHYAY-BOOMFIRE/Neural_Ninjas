@@ -9,6 +9,19 @@ ENV/
 Images/
 duplicate/
 
+# Input folder: paste images here locally — NOT committed to git
+# (keep folder tracked via input/.gitkeep)
+input/*
+!input/.gitkeep
+
+# input-output/ results ARE committed so the repo shows proof of predictions
+# Only ignore images copied into it (keep .txt results and .gitkeep)
+input-output/*.jpg
+input-output/*.jpeg
+input-output/*.png
+input-output/*.bmp
+input-output/*.webp
+
 # Python byte-code and caches
 __pycache__/
 *.py[cod]
